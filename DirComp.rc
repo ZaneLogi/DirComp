@@ -1,0 +1,290 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DirComp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DirComp.ico"
+IDI_BROWSER             ICON                    "res\\browser.ico"
+IDI_ICON_NOT_EQUAL      ICON                    "res\\icon1.ico"
+IDI_ICON_EQUAL          ICON                    "res\\ico00001.ico"
+IDI_ICON_FIND_NEXT_EQUAL ICON                    "res\\ico00002.ico"
+IDI_ICON_FIND_NEXT_NOT_EQUAL ICON                    "res\\icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DirComp"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DirComp Version 1.5.0.1",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_DIRCOMP_DIALOG DIALOGEX 0, 0, 348, 277
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "DirComp"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "Source",IDC_STATIC,13,21,158,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    COMBOBOX        IDC_CB_SRC_FOLDER,13,34,140,66,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button2",IDC_BTN_SRC_BROWSER,155,34,16,16,BS_ICON
+    CTEXT           "Target",IDC_STATIC,176,21,158,11,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    COMBOBOX        IDC_CB_DST_FOLDER,175,34,140,65,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button1",IDC_BTN_DST_BROWSER,317,34,16,16,BS_ICON
+    LTEXT           "Include: ",IDC_STATIC,7,65,26,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_INCLUDE,36,65,40,14,ES_AUTOHSCROLL
+    CONTROL         "Include subfolders",IDC_CHECK_INCLUDE_SUBFOLDER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,90,65,80,14
+    PUSHBUTTON      "Equal",IDC_BTN_EQUAL,175,63,16,16,BS_ICON
+    PUSHBUTTON      "Not equal",IDC_BTN_NOT_EQUAL,193,63,16,16,BS_ICON
+    PUSHBUTTON      "&Start",IDC_BTN_START,273,65,32,14,WS_DISABLED
+    PUSHBUTTON      "S&top",IDC_BTN_STOP,309,65,32,14,WS_DISABLED
+    LTEXT           "Ready",IDC_FILE_COMPARING,7,84,164,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER | 
+                    0x1,177,84,164,14
+    CONTROL         "List1",IDC_LIST_FILES,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,115,334,155,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         "Progress2",IDC_PROGRESS2,"msctls_progress32",WS_BORDER | 
+                    0x1,7,101,334,9
+    GROUPBOX        "Folder",IDC_STATIC,7,7,334,53
+    CONTROL         "",IDC_STATIC_FRAME,"Static",SS_BLACKFRAME,0,0,347,276,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Not equal",IDC_BTN_FIND_NEXT_EQUAL,211,63,16,16,BS_ICON
+    PUSHBUTTON      "Not equal",IDC_BTN_FIND_NEXT_NOT_EQUAL,229,63,16,16,
+                    BS_ICON
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,5,0,1
+ PRODUCTVERSION 1,5,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "LuSoft"
+            VALUE "FileDescription", "DirComp MFC Application"
+            VALUE "FileVersion", "1, 5, 0, 1"
+            VALUE "InternalName", "DirComp"
+            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "OriginalFilename", "DirComp.EXE"
+            VALUE "ProductName", "DirComp Application"
+            VALUE "ProductVersion", "1, 5, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIRCOMP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Operation"
+    BEGIN
+        POPUP "&Delete selected files"
+        BEGIN
+            MENUITEM "&Source",                     ID_POPUP_DEL_SEL_SRC_FILES
+
+            MENUITEM "&Target",                     ID_POPUP_DEL_SEL_DST_FILES
+
+            MENUITEM "&Both",                       ID_POPUP_DEL_SEL_BOTH_FILES
+
+        END
+        POPUP "&Copy selected files"
+        BEGIN
+            MENUITEM "&Source -> Target",           ID_POPUP_COPY_SEL_FILES_SRC2DST
+
+            MENUITEM "&Target -> Source",           ID_POPUP_COPY_SEL_FILES_DST2SRC
+
+        END
+        MENUITEM "C&ompare selected files...",  ID_POPUP_COMP_SEL_FILES
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About DirComp...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About DirComp..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\DirComp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
